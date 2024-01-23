@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--xmlns:th: tyhmeleaf를 사용하려면 이걸 붙여야함 -->
+<head th:replace="fragments/header :: header">
+    <!--실제 렌더링될 때 여기있는 fragments header로 바꿔치기를 한다-->
+    <title>Hello</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+    <!--실제 렌더링될 때 여기있는 fragments body로 바꿔치기를 한다-->
+    <div class="jumbotron">
+        <h1>HELLO SHOP</h1>
+        <p class="lead">회원 기능</p>
+        <p>
+            <a class="btnbtn-lgbtn-secondary" href="/members/new">회원 가입</a>
+            <a class="btnbtn-lgbtn-secondary" href="/members">회원 목록</a></p>
+        <p class="lead">상품 기능</p>
+        <p>
+            <a class="btnbtn-lgbtn-dark" href="/items/new">상품 등록</a>
+            <a class="btnbtn-lgbtn-dark" href="/items">상품 목록</a></p>
+        <p class="lead">주문 기능</p>
+        <p>
+            <a class="btnbtn-lgbtn-info" href="/order">상품 주문</a>
+            <a class="btnbtn-lgbtn-info" href="/orders">주문 내역</a>
+        </p>
+    </div>
+    <div th:replace="fragments/footer :: footer"/>
+    <!--실제 렌더링될 때 여기있는 fragments footer 로 바꿔치기를 한다-->
+</div> <!-- /container -->
+</body>
+</html>
